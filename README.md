@@ -1,2 +1,2 @@
-# rest-rant
+# Rest-rant
 Example restaurant rating app
