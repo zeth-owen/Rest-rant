@@ -4,12 +4,26 @@ const render = require('../render');
 const places = require('../models/places.js');
 
 router.get('/', (req, res) => {
-    res.send(render('places/Index', { places: places }));
+  res.send(render('places/Index', { places: places }));
 });
 
 router.get('/new', (req, res) => {
     res.send(render('places/New'));
 });
+
+router.get('/:id', (req, res) => {
+  let id = Number(req.params.id)
+  if (isNaN(id)) {
+    res.render('error404')
+  }
+  else if (!places[id]) {
+    res.render('error404')
+  }
+  else {
+    res.render('places/show', { place: places[id] })
+  }
+})
+
 
 router.post('/', (req, res) => {
     console.log(req.body)
