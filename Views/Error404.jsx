@@ -1,5 +1,5 @@
 const React = require('react');
-const Default = require('./layouts/default');
+const Default = require('../Views/layouts/default');
 
 const NotFound = () => {
     return (
@@ -8,7 +8,7 @@ const NotFound = () => {
             <main>
                 <h2>Timmy not found.</h2>
                 <img
-                    src='/images/bread-not-found.jpg'
+                    src='/images/bread.jpeg'
                     alt='Croissant with a Croissant Family, but missing Timmy.'
                 />
             </main>

@@ -1,7 +1,8 @@
 const React = require('react')
 const Def = require('../layouts/default')
 
-function show (data) {
+
+function Show (data) {
     return (
         <Def>
           <main>
@@ -31,7 +32,8 @@ function show (data) {
     )
 }
 
-module.exports = show
+module.exports = Show
+
    
 
 

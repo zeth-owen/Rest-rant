@@ -4,7 +4,7 @@ const Default = require('../layouts/default');
 const Index = (data) => {
     let placesFormatted = data.places.map((place, index) => {
         return (
-          <div className="col-sm-6">
+          <div key={place.name} className='col-sm-6'>
             <h2>
               <a href={`/places/${index}`} >
                 {place.name}
