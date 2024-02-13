@@ -48,4 +48,6 @@ body {
   text-align: center;
 }
 
-
+.card-title {
+  text-align: left important!;
+}

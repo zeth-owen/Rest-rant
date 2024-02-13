@@ -1,6 +1,6 @@
 let places = [
     {
-        name: 'Le Croissant 🤌',
+        name: 'Le Croissant',
         city: 'Seattle',
         state: 'WA',
         cuisines: 'French, Bakery',
