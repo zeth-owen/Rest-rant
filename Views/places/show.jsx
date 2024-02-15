@@ -12,12 +12,12 @@ function Show (data) {
               </div>
                 <div className="card-body">
                   <img src={data.place.pic} alt="" />
-                  <h5 className="card-title"><u>Description</u></h5>
+                  <h5 className="card-title"><u>Description</u> <br /> {data.place.cuisines} <br />{data.place.city}{data.place.state}</h5>
                   <h5 className="card-title">Rating:</h5>
                 </div>
-                <a href={`/places/${data.id}/edit`} className="btn btn-warning"> 
-                  Edit
-                </a>  
+                <div>
+                <a href={`/places/${data.id}/edit`} className="btn btn-warning"> Edit</a>
+                </div> 
                 <form method="POST" action={`/places/${data.id}?_method=DELETE`}> 
                   <button type="submit" className="btn btn-danger">
                     Delete
