@@ -51,3 +51,9 @@ body {
 .card-title {
   text-align: left important!;
 }
+
+.button-flex {
+  display: flex;
+  justify-content: space-evenly;
+  padding-bottom: 10px;
+}
