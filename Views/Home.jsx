@@ -9,9 +9,7 @@ function home () {
                 <div>
                     <img src="/images/ChiaJuice.jpeg" alt="Chia Fruit Shake" className="shrink-image" />
                 </div>
-                <a href="/places">
-                    <button className="btn-primary">Places Page</button>
-                </a>
+                 <button type="button" className="btn btn-primary"><a href="/places">Places Page</a></button>
             </main>
         </Def>
     )
