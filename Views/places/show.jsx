@@ -1,5 +1,6 @@
 const React = require('react')
 const Def = require('../layouts/default')
+const comment = require('../../models/comment')
 
 
 function Show (data) {
@@ -24,15 +25,15 @@ function Show (data) {
     rating = (
       <h3> {stars} stars </h3>
     )
-    comments = data.place.comments.map(c => {
+    comments = data.place.comments.map(comment => {
       return (
-        <div className="border">
-          <h2 className="rant">{c.rant ? 'Rant! 🤬' : 'Rave! 😁'}</h2>
-          <h4>{c.content}</h4>
+        <div key = {comment.id} className="border">
+          <h2 className="rant">{comment.rant ? 'Rant! 🤬' : 'Rave! 😁'}</h2>
+          <h4>{comment.content}</h4>
           <h3>
-            <stong>{c.author}</stong>
+            <stong>{comment.author}</stong>
           </h3>
-          <h4>Rating:{c.stars}</h4>
+          <h4>Rating:{comment.stars}</h4>
         </div>
       )
     })
@@ -59,20 +60,23 @@ function Show (data) {
                 </form>    
                 </div> 
                <div className="card-footer text-body-secondary">
+                
+                
                 <h3><b>Comments</b></h3>
                 {comments}
                 </div>  
                 </div>
+                
                 <h1>Rant or Rave?</h1>       
               <form method="POST" action={`/places/${data.place.id}/comment`}>
-                    <div class="mb-3">
-                      <label htmlFor="content" class="form-label">Content</label>
-                      <textarea class="form-control" id="content" name='content' rows="3" defaultValue="I love it!" ></textarea>
+                    <div className="mb-3">
+                      <label htmlFor="content" className="form-label">Content</label>
+                      <textarea className="form-control" id="content" name='content' rows="3" defaultValue="I love it!" ></textarea>
                     </div>
                     <div className='row'>
                     <div className="form-group col-sm-4">
                       <label htmlFor="author">Author</label>
-                      <input className="form-control" id="author" name="author"required />
+                      <input className="form-control" id="author" name="author" defaultValue="" required />
                     </div>  
                     <div className="form-group col-sm-3">
                       <label htmlFor="stars">Star Rating (1-5)</label>
