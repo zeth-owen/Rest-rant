@@ -71,7 +71,7 @@ function show (data) {
               <form method="POST" action={`/places/${data.place.id}/comment`}>
                     <div className="mb-3">
                       <label htmlFor="content" className="form-label">Content</label>
-                      <textarea className="form-control" id="content" name='content' rows="3" defaultValue="I love it!" ></textarea>
+                      <textarea className="form-control" id="content" name='content' rows="3" placeholder="I love it!" ></textarea>
                     </div>
                     <div className='row'>
                     <div className="form-group col-sm-4">
@@ -84,8 +84,8 @@ function show (data) {
                       <input type="number" className="form-control" id="stars" name="stars" min="1" max="5" required />
                     </div> 
                     <div className="form-check col-sm-1">
-                      <input className="form-check-input" type="checkbox" id="rant"/>
-                      <label className="form-check-label" htmlFor="rant" name="rant"  >Rant?</label>
+                      <input className="form-check-input" type="checkbox" id="rant" name="rant"/>
+                      <label className="form-check-label" htmlFor="rant" >Rant?</label>
                     </div>
                     </div>
                     <button type="submit" className="btn btn-info">Add Comment</button>
