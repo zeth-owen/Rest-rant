@@ -1,7 +1,7 @@
 const React = require('react');
 const Default = require('../layouts/default');
 
-const Index = (data) => {
+const index = (data) => {
     let placesFormatted = data.places.map((place) => {
         return (
           <div key={place.name} className='col-sm-6'>
@@ -32,4 +32,4 @@ const Index = (data) => {
     );
 };
 
-module.exports = Index;
+module.exports = index;
