@@ -3,7 +3,7 @@ const Def = require('../layouts/default')
 const comment = require('../../models/comment')
 
 
-function Show (data) {
+function show (data) {
   let comments = (
     <h3 className = "inactive"> No comments yet!</h3>
   )
@@ -95,7 +95,7 @@ function Show (data) {
     )
 }
 
-module.exports = Show
+module.exports = show
 
 
 
