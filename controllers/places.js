@@ -33,7 +33,7 @@ router.post('/', (req, res) => {
 router.get('/', (req, res) => {
     db.Place.find()
     .then((places) => {
-        res.send(render('places/index', { places }))
+        res.send(render('places/index', { place }))
     })
     .catch((err) => {
         console.log(err)
