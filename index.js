@@ -21,6 +21,7 @@ app.use('/places', require('./controllers/places'));
 
 app.get('/', (req, res) => {
     res.send(render('Home'));
+    console.log()
 });
 
 // Wildcard/404 route
