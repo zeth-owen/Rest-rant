@@ -1,6 +1,6 @@
 const React = require('react')
 const Def = require('../layouts/default')
-const comment = require('../../mod/comment')
+const comment = require('../../models/comment')
 
 
 function Show (data) {
