@@ -32,8 +32,8 @@ router.post('/', (req, res) => {
 
 router.get('/', (req, res) => {
     db.Place.find()
-    .then((place) => {
-        res.send(render('places/index', { place }))
+    .then((places) => {
+        res.send(render('places/index', { places }))
     })
     .catch((err) => {
         console.log(err)
