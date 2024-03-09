@@ -95,7 +95,7 @@ function show (data) {
     )
 }
 
-module.exports = Show
+module.exports = show
 
 
 
