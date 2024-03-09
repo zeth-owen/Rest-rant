@@ -1,6 +1,6 @@
 const React = require('react')
 const Def = require('../layouts/default')
-const comment = require('../../models/comment')
+const comment = require('../../mod/comment')
 
 
 function Show (data) {
@@ -84,8 +84,8 @@ function Show (data) {
                       <input type="number" className="form-control" id="stars" name="stars" min="1" max="5" required />
                     </div> 
                     <div className="form-check col-sm-1">
-                      <input className="form-check-input" type="checkbox" id="rant"/>
-                      <label className="form-check-label" htmlFor="rant" name="rant"  >Rant?</label>
+                      <input className="form-check-input" type="checkbox" id="rant" name="rant" />
+                      <label className="form-check-label" htmlFor="rant">Rant?</label>
                     </div>
                     </div>
                     <button type="submit" className="btn btn-info">Add Comment</button>
