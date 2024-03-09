@@ -20,7 +20,7 @@ app.use('/places', require('./controllers/places'));
 
 
 app.get('/', (req, res) => {
-    res.send(render('Home'));
+    res.send(render('home'));
     console.log()
 });
 
