@@ -32,7 +32,7 @@ router.post('/', (req, res) => {
 
 router.get('/', (req, res) => {
     db.Place.find()
-    .then((places) => {
+    .then((place) => {
         res.send(render('places/index', { place }))
     })
     .catch((err) => {
